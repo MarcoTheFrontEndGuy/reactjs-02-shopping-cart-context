@@ -1,13 +1,20 @@
-import './App.css';
-import TshirtList from './TshirtList'
-import Cart from './Cart';
-function App() {
-  return (
-    <div>
-      <Cart />
-      <TshirtList />
-    </div>
-  );
+import React from 'react'
+import Cart from './Cart'
+import { CartProvider } from './CartContext'
+import './style.css'
+import {TshirtList} from './TshirtList'
+
+
+const App = () => {
+   return (
+      <CartProvider>
+        <div>
+          <Cart />
+          <TshirtList /> 
+        </div>
+      </CartProvider>
+    
+   )
 }
 
-export default App;
+export default App 
