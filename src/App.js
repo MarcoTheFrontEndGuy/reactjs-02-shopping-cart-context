@@ -1,9 +1,11 @@
 import './App.css';
-
+import TshirtList from './TshirtList'
+import Cart from './Cart';
 function App() {
   return (
-    <div className="App">
-      Hello world
+    <div>
+      <Cart />
+      <TshirtList />
     </div>
   );
 }
