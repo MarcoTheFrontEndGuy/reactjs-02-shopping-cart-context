@@ -1,9 +1,17 @@
 import React from 'react'
+import { useContext } from 'react'
+import { CartContext } from './CartContext'
+
 
 export default function Tshirt(props) {
+   const [cart, setCart] = useContext(CartContext);
+   const tshirt = {name: props.name, price: props.price}
    const addToCart = () => {
-      // console.log("clicked");
+    
+      setCart(previousState => [...previousState, tshirt]);
+      
    }
+
   return (
     <div>
        <h2>{props.name}</h2>
