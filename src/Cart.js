@@ -6,9 +6,9 @@ export default function Cart() {
    const [cart, setCart] = useContext(CartContext);
   return (
     <div>
-       <span>items in cart: {cart}</span>
+       <span>items in cart: {cart.length}</span>
        <br />
-       <span>total price: 0</span>
+       <span>total price: {cart.length}</span>
     </div>
   )
 }
