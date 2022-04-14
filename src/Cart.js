@@ -9,6 +9,18 @@ export default function Cart() {
        <span>items in cart: {cart}</span>
        <br />
        <span>total price: 0</span>
+       <br />
+       <br />
+       <br />
+       <br />
+       <div className="listSelectedArticles">
+         {cart.map((eachArticle) => (
+           <div className="articleWithDetails" >
+             <h2>{eachArticle.name}</h2>
+             <p>{eachArticle.price}</p>
+           </div>
+         ))}
+       </div>
     </div>
   )
 }
