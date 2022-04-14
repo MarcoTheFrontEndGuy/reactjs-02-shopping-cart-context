@@ -7,7 +7,6 @@ export default function Tshirt(props) {
    const [cart, setCart] = useContext(CartContext);
    const tshirt = {name: props.name, price: props.price}
    const addToCart = () => {
-      console.log("clicked");
     
       setCart(previousState => [...previousState, tshirt]);
       
